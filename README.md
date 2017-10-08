@@ -5,5 +5,5 @@
 		- **site**: https://brew.sh
 		- **terminal**: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	* **terminal**: brew install yarn
-	* **terminal**: yarn --version
-	* **terminal**: yarn init
+	* **terminal**: ***yarn --version***
+	* ***terminal***: yarn init
