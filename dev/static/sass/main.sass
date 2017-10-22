@@ -1,4 +1,134 @@
+// Подключаем библиотеки
+@import '_libs'
+
+// Подключаем переменные
+@import '_vars'
+
+// Подключаем спрайты (просто раскоментируем импорт при появлении PNG спрайтов)
+//@import '_sprite'
+
+// Подключаем миксины
+@import 'utils/_mixins'
+
+html 
+	line-height: 1.4
+	font-size: $baseFontSizePx
+	height: 100%
 body
-	background: red
-body
-	color: black
+	font-family: $fontR
+	font-weight: 400
+	color: #333
+	height: 100%
+	min-width: 320px
+
+
+h1,h2,h3,h4,h5,h6
+	margin: 0
+
+ul,li
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+p
+	margin: 0
+
+a
+	text-decoration: none
+	color: #333
+	&:active,&:hover,&:focus
+		color: $main-color
+		text-decoration: none
+		outline: none!important
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button
+	-webkit-appearance: none
+	margin: 0
+input[type='number']
+	-moz-appearance: textfield
+
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video
+	vertical-align: middle
+
+textarea
+	resize: none
+
+input,
+select,
+button
+	outline: none!important
+
+*, *:before, *:after
+	box-sizing: border-box
+  
+.hide
+	display: none
+  
+.show
+	display: block
+  
+::-moz-selection 
+	background: #b3d4fc
+	text-shadow: none
+
+::selection 
+	background: #b3d4fc
+	text-shadow: none
+
+.clearfix:before,
+.clearfix:after 
+	content: " "
+	display: table
+
+.clearfix:after 
+	clear: both
+
+.clearfix 
+	*zoom: 1
+
+input,button,select,textarea
+	border: 0
+	padding: 0.5rem
+	background: transparent
+
+.text-center
+	text-align: center
+
+iframe,img
+	max-width: 100%
+.before
+	position: absolute
+	content: ''
+	left: 0
+	top: 0
+	height: 100%
+	width: 100%
+
+// Общие стили
+@import '_common_styles'
+
+// МОДУЛИ
+// Стили шапки
+@import 'modules/header/_header'
+
+// Стили футера
+@import 'modules/footer/_footer'
+
+// Стили меню
+@import 'modules/navigation/_main-nav'
+
+//Компоненты
+@import "components/_components"
+
+// СТРАНИЦЫ
+// Стили главной страницы
+@import 'pages/_index'
+
+// Стили медиазапросов
+@import '_media'

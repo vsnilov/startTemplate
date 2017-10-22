@@ -1,0 +1,5 @@
+@mixin rem ($pxsize)
+	font-size: ($pxsize/$baseFontSize)+rem
+
+@function rem($pxsize)
+	@return #{$pxsize/$baseFontSize}rem

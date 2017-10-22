@@ -1,59 +1,35 @@
 'use strict';
 
-var gulp = require('gulp'),
-	plugin  = require('gulp-load-plugins')(),
-	browserSync = require('browser-sync').create();
+global.$ = {
+	path: {
+		task: require('./gulp/paths/tasks.js')
+	},
+	gulp : require('gulp'),
+	del: require('del'),
+	fs: require('fs'),
+	browserSync : require('browser-sync').create(),
+	plugin : require('gulp-load-plugins')()
+}
 
-//локальный сервер
-gulp.task('serve', function() {
-	browserSync.init({//запауск сервера
-		server: {
-			baseDir: './build'
-		}
-	});
+$.path.task.forEach(function(taskPath) {
+	require(taskPath)();
 });
 
-//шаблонизатор pug
-gulp.task('pug', function(){
-	return gulp.src('dev/pug/pages/*.pug')//от куда
-		.pipe(plugin.pug({
-			pretty: true//unminify html
-		}))
-		.pipe(gulp.dest('build'))//куда
-		.pipe(browserSync.reload({//перезагрузка браузера
-			stream: true
-		}))
-});
+//сборка для разработки
+$.gulp.task('dev', $.gulp.series(
+	'clean',
+	$.gulp.parallel('pug', 'sass:dev', 'libsJS:dev', 'js:copy', 'img:dev', 'svg','fonts')));
 
-//шаблонизатор sass
-gulp.task('sass', function(){
-	return gulp.src('dev/static/sass/*.sass')//от куда
-		.on("error", plugin.notify.onError({//обработчик ошибок
-			message: "Error: <%= error.message %>",
-			title: "Error running something"
-		}))
-		.pipe(plugin.sourcemaps.init())//Инициализируем sourcemap, помогает при отладке кода
-		.pipe(plugin.sass({}))
-		.pipe(plugin.autoprefixer({//автоматически добавляет вендорные префиксы к CSS свойствам
-			browsers: ['last 10 versions', '> 5%', 'ie 8'],
-			cascade: true
-		}))
-		.pipe(plugin.csso())//minify css
-		.pipe(plugin.sourcemaps.write())//Пропишем карты
-		.pipe(gulp.dest('build/static/css/'))//куда
-		.pipe(browserSync.reload({//перезагрузка браузера
-			stream: true
-		}))
-});
-
-//слежка за изменениями в файлах
-gulp.task('watch', function(){
-	gulp.watch('dev/pug/**/*.pug',gulp.series('pug'));
-	gulp.watch('dev/static/sass/**/*.sass',gulp.series('sass'));
-});
+//сборка для пользователя
+$.gulp.task('build', $.gulp.series(
+	'clean',
+	$.gulp.parallel('pug', 'sass:build', 'libsJS:dev', 'js:copy', 'img:build', 'svg', 'fonts')));
 
 //task по умолчанию
-gulp.task('default', gulp.series(
-	gulp.parallel('pug','sass'),
-	gulp.parallel('watch','serve')
+$.gulp.task('default', $.gulp.series(
+	'dev',
+	$.gulp.parallel(
+		'watch',
+		'serve'
+	)
 ));
