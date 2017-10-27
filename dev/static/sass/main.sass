@@ -14,13 +14,13 @@ html
 	line-height: 1.4
 	font-size: $baseFontSizePx
 	height: 100%
+
 body
 	font-family: $fontR
 	font-weight: 400
 	color: #333
 	height: 100%
 	min-width: 320px
-
 
 h1,h2,h3,h4,h5,h6
 	margin: 0
@@ -36,17 +36,17 @@ p
 a
 	text-decoration: none
 	color: #333
-	&:active,&:hover,&:focus
+	&:active,&:hover
 		color: $main-color
 		text-decoration: none
 		outline: none!important
+
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button
 	-webkit-appearance: none
 	margin: 0
 input[type='number']
 	-moz-appearance: textfield
-
 
 audio,
 canvas,
@@ -59,20 +59,9 @@ video
 textarea
 	resize: none
 
-input,
-select,
-button
-	outline: none!important
-
 *, *:before, *:after
 	box-sizing: border-box
-  
-.hide
-	display: none
-  
-.show
-	display: block
-  
+
 ::-moz-selection 
 	background: #b3d4fc
 	text-shadow: none
@@ -96,32 +85,17 @@ input,button,select,textarea
 	border: 0
 	padding: 0.5rem
 	background: transparent
-
-.text-center
-	text-align: center
+	outline: none
 
 iframe,img
 	max-width: 100%
-.before
-	position: absolute
-	content: ''
-	left: 0
-	top: 0
-	height: 100%
-	width: 100%
-
-// Общие стили
-@import '_common_styles'
 
 // МОДУЛИ
 // Стили шапки
-@import 'modules/header/_header'
+@import 'modules/_header'
 
 // Стили футера
-@import 'modules/footer/_footer'
-
-// Стили меню
-@import 'modules/navigation/_main-nav'
+@import 'modules/_footer'
 
 //Компоненты
 @import "components/_components"
@@ -130,5 +104,3 @@ iframe,img
 // Стили главной страницы
 @import 'pages/_index'
 
-// Стили медиазапросов
-@import '_media'

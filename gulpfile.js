@@ -25,6 +25,9 @@ $.gulp.task('build', $.gulp.series(
 	'clean',
 	$.gulp.parallel('pug', 'sass:build', 'libsJS:dev', 'js:copy', 'img:build', 'svg', 'fonts')));
 
+//сборка png файлов
+$.gulp.task('sprite', $.gulp.series('cleansprite', 'spritemade'));
+
 //task по умолчанию
 $.gulp.task('default', $.gulp.series(
 	'dev',
