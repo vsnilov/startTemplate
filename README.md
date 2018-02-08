@@ -1,5 +1,17 @@
 Для запуска шаблона нужно выполнить следующие шаги:
 =====================
+1) Yarn установлен
+=====================
+1) ### Скачать шаблон
+	* terminal: ***git clone https://github.com/vn38/startTemplate***
+2) ### Иницилизация проекта
+	* terminal: ***yarn install***
+3) ### Запустить
+	* terminal: ***sudo su***
+	* terminal: ***gulp***
+=====================
+2) Yarn НЕ установлен
+=====================
 1) ### Скачать шаблон
 	* terminal: ***git clone https://github.com/vn38/startTemplate***
 2) ### Установить yarn
@@ -11,6 +23,5 @@
 	* terminal: ***yarn init***
 	* terminal: ***yarn install***
 3) ### Запустить
-	* terminal: ***su***
+	* terminal: ***sudo su***
 	* terminal: ***gulp***
-4) ### test

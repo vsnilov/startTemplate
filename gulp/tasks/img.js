@@ -10,7 +10,7 @@ module.exports = function () {
 	//оптимизация изображений tinypng
 	$.gulp.task('img:build', () => {
 		return $.gulp.src('./dev/static/img/**/*.{png,jpg,gif}')
-		.pipe($.gp.tinypng('EJEFC_KcQukE79WvXKi9utNDDodA1Kxj'))
+		.pipe($.plugin.tinypng('EJEFC_KcQukE79WvXKi9utNDDodA1Kxj'))
 		.pipe($.gulp.dest('./build/static/img/'));
 	});
 };
