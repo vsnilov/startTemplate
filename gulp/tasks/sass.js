@@ -21,7 +21,7 @@ module.exports = function () {
 
 	$.gulp.task('sassLibs', function(){
 		return $.gulp.src([
-			//'node_modules/bootstrap/dist/css/bootstrap.css',
+			'node_modules/bootstrap/dist/css/bootstrap.css',
 			//'node_modules/owl.carousel2/dist/assets/owl.carousel.css',
 			//'node_modules/lightgallery/dist/css/lightgallery.css',
 			//'node_modules/magnific-popup/dist/magnific-popup.css',
@@ -37,13 +37,7 @@ module.exports = function () {
 
 	});
 
-	$.gulp.task('sassLibsAsessets', function(){
-		return $.gulp.src([
-			//'node_modules/lightgallery/dist/fonts/**/*.*',
-			])//от куда
-			.pipe($.gulp.dest('./build/static/fonts/'))
-	});
-
+	
 	$.gulp.task('sass:build', function(){
 		return $.gulp.src([
 			'dev/static/sass/*.sass',

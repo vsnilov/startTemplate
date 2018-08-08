@@ -42,14 +42,36 @@
 
 //@include tablets
 //	width: 100%
-@mixin tablets()
-	@media screen and (max-width: 768px)
+@mixin lg()
+	@media screen and (max-width: 1199px)
+		@content
+		
+@mixin md()
+	@media screen and (max-width: 991px)
 		@content
 
-@mixin phones()
-	@media screen and (max-width: 480px)
+@mixin sm()
+	@media screen and (max-width: 767px)
+		@content
+
+@mixin xs()
+	@media screen and (max-width: 479px)
 		@content
 
 //@include font;
-@mixin font()
+@mixin font($font)
 	font-family: $font
+
+@mixin bgi($name)
+	background-image: url($name)
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+
+@mixin before()
+	position: absolute
+	content: ''
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%

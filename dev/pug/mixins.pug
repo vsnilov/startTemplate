@@ -3,3 +3,7 @@ mixin svg(name,mod)
 	svg(class="icon icon-" + name + ' ' + mod)
 		use(xlink:href="/static/img/svg/symbol/sprite.svg#" + name)
 
+mixin icon(name,mod)
+	- mod = mod || ''
+	i(class="icon icon-" + name + ' ' + mod)
+

@@ -1,5 +1,6 @@
 yarn.lock
 .vscode
+.git
 backstop_data
 build
 node_modules
