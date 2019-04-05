@@ -42,6 +42,9 @@
 
 //@include tablets
 //	width: 100%
+@mixin xl()
+	@media screen and (max-width: 1699px)
+		@content
 @mixin lg()
 	@media screen and (max-width: 1199px)
 		@content
@@ -56,6 +59,10 @@
 
 @mixin xs()
 	@media screen and (max-width: 479px)
+		@content
+	
+@mixin xs-mini()
+	@media screen and (max-width: 374px)
 		@content
 
 //@include font;

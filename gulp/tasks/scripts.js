@@ -4,6 +4,7 @@
 module.exports = function () {
 	$.gulp.task('libsJS:dev', () => {
 		return $.gulp.src([
+			'node_modules/jquery/dist/jquery.min.js',
 			'node_modules/svg4everybody/dist/svg4everybody.min.js',
 			])
 			.pipe($.plugin.concat('libs.min.js'))
@@ -17,6 +18,7 @@ module.exports = function () {
 
 	$.gulp.task('libsJS:build', () => {
 		return $.gulp.src([
+				'node_modules/jquery/dist/jquery.min.js',
 				'node_modules/svg4everybody/dist/svg4everybody.min.js',
 			])
 			.pipe($.plugin.concat('libs.min.js'))

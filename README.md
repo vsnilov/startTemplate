@@ -24,3 +24,14 @@ Yarn НЕ установлен
 3) ### Запустить
 	* terminal: ***sudo su***
 	* terminal: ***gulp***
+
+=====================
+	### Библиотеки
+	* yarn add jquery.maskedinput --dev
+	* yarn add magnific-popup --dev
+	* yarn add owl.carousel2 --dev
+	* yarn add lightgallery --dev
+	* yarn add lg-thumbnail --dev
+	* yarn add page-scroll-to-id --dev
+	* yarn add jquery-validation --dev
+	* yarn add sticky-kit --dev

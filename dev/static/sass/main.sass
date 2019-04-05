@@ -1,6 +1,3 @@
-// Подключаем библиотеки
-@import '_libs'
-
 // Подключаем переменные
 @import '_vars'
 
@@ -11,7 +8,7 @@
 @import 'utils/_mixins'
 
 html 
-	line-height: 1.4
+	line-height: 1.6
 	font-size: $baseFontSizePx
 	height: 100%
 
@@ -21,6 +18,8 @@ body
 	color: #333
 	height: 100%
 	min-width: 320px
+	line-height: 1.6
+	-webkit-overflow-scrolling: touch
 
 h1,h2,h3,h4,h5,h6
 	margin: 0
@@ -35,9 +34,10 @@ p
 
 a
 	text-decoration: none
-	color: #333
+	color: $main-color
+	transition: all .3s ease
 	&:active,&:hover
-		color: $main-color
+		color: $accent-color
 		text-decoration: none
 		outline: none!important
 
@@ -90,6 +90,27 @@ input,button,select,textarea
 iframe,img
 	max-width: 100%
 
+.hide
+	display: none
+
+.c-color
+	&__main
+		color: $main-color
+	&__accent
+		color: $accent-color
+
+.noscroll
+	overflow: hidden
+	-webkit-overflow-scrolling: touch
+
+.no-fixed
+	position: fixed
+	left: 0
+	top: 0
+	height: 100%
+	width: 100%
+
+
 // МОДУЛИ
 // Стили шапки
 @import 'modules/_header'
@@ -98,6 +119,7 @@ iframe,img
 @import 'modules/_footer'
 
 //Компоненты
+@import 'modules/_nav'
 @import "components/_components"
 
 // СТРАНИЦЫ
