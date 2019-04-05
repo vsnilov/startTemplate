@@ -26,7 +26,14 @@ Yarn НЕ установлен
 	* terminal: ***gulp***
 
 
-Библиотеки
+Библиотеки установленные
+=====================
+	"bootstrap": "^4.3.1",
+	"jquery": "^3.3.1",
+	"popper": "^1.0.1",
+	"svg4everybody": "^2.1.9"
+
+Библиотеки часто использумые
 =====================
 	yarn add jquery.maskedinput --dev
 	yarn add magnific-popup --dev
