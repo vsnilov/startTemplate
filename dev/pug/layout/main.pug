@@ -19,9 +19,8 @@ html(lang="ru")
 		meta(property="og:video" content=og_video)
 		meta(property="og:site_name" content=og_site_name)
 
-		//- favicon block start
-		//- favicon block end
 
+		link(rel="stylesheet" type='text/css' href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap&subset=cyrillic")
 		link(rel="stylesheet" type='text/css' href="static/css/fonts.css")
 		link(rel="stylesheet" type='text/css' href="static/css/libs.css")
 		link(rel="stylesheet" type='text/css' href="static/css/main.css")
@@ -30,14 +29,16 @@ html(lang="ru")
 			script(src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
 		<![endif]-->
 	body
-		.wrapper
+		.c-wrapper
 			include ../modules/header
 			main.c-main
 				block content
 			include ../modules/footer
 		.hide
-			include ../modules/popup
+			include ../modules/modal
+		
 		script(src="static/js/libs.min.js")
-		script(src="static/js/common.js")
+		script(src="static/js/index.js")
+		script(src="static/js/map.js")
 		
 		block script

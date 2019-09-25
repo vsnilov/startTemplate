@@ -8,7 +8,10 @@ global.$ = {
 	del: require('del'),
 	fs: require('fs'),
 	browserSync : require('browser-sync').create(),
-	plugin : require('gulp-load-plugins')()
+	plugin : require('gulp-load-plugins')(),
+	webpack : require('webpack'),
+	webpackStream : require('webpack-stream'),
+	webpackConfig : require('./webpack.config.js')
 }
 
 $.path.task.forEach(function(taskPath) {
@@ -18,12 +21,12 @@ $.path.task.forEach(function(taskPath) {
 //сборка для разработки
 $.gulp.task('dev', $.gulp.series(
 	'clean',
-	$.gulp.parallel('pug', 'sass:dev', 'libsJS:dev', 'js:copy', 'img:dev', 'svg','fonts','sassLibs')));
+	$.gulp.parallel('pug', 'sass:dev', 'libsJS:dev', 'js:copy', 'img:dev', 'svg','fonts')));
 
 //сборка для пользователя
 $.gulp.task('build', $.gulp.series(
 	'clean',
-	$.gulp.parallel('pug', 'sass:build', 'libsJS:dev', 'js:copy', 'img:build', 'svg', 'fonts','sassLibs')));
+	$.gulp.parallel('pug', 'sass:build', 'libsJS:dev', 'js:webpack', 'js:copy', 'img:build', 'svg', 'fonts')));
 
 //сборка png файлов
 $.gulp.task('sprite', $.gulp.series('cleansprite', 'spritemade'));

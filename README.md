@@ -1,4 +1,6 @@
-Для запуска шаблона нужно выполнить следующие шаги:
+Версия без jquery зависимостей
+=====================
+Для запуска шаблона:
 =====================
 Yarn установлен
 =====================
@@ -9,6 +11,8 @@ Yarn установлен
 3) ### Запустить
 	* terminal: ***sudo su***
 	* terminal: ***gulp***
+
+=====================
 Yarn НЕ установлен
 =====================
 1) ### Скачать шаблон
@@ -25,21 +29,22 @@ Yarn НЕ установлен
 	* terminal: ***sudo su***
 	* terminal: ***gulp***
 
-
 Библиотеки установленные
 =====================
-	"bootstrap": "^4.3.1",
-	"jquery": "^3.3.1",
-	"popper.js": "^1.14.7",
 	"svg4everybody": "^2.1.9"
 
-Библиотеки часто использумые
+Библиотеки часто использумые js
 =====================
-	yarn add jquery.maskedinput --dev
-	yarn add magnific-popup --dev
-	yarn add owl.carousel2 --dev
-	yarn add lightgallery --dev
-	yarn add lg-thumbnail --dev
-	yarn add page-scroll-to-id --dev
-	yarn add jquery-validation --dev
-	yarn add sticky-kit --dev
+	https://github.com/uNmAnNeR/imaskjs - маска
+	https://github.com/ganlanyuan/tiny-slider - слайдер
+	https://github.com/nolimits4web/swiper - слайдер
+	https://github.com/cferdinandi/tabby - табы
+	https://github.com/jonathantneal/svg4everybody - поддержка svg
+	https://github.com/ghosh/Micromodal - модалка
+	https://github.com/cferdinandi/smooth-scroll/ - плавный скролл
+	https://github.com/juliangarnier/anime - anime.js
+
+Библиотеки часто использумые css
+=====================
+	https://github.com/twbs/bootstrap - bootstrap
+	https://github.com/jonsuh/hamburgers - hamburgers

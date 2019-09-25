@@ -34,8 +34,9 @@ p
 
 a
 	text-decoration: none
-	color: $main-color
+	color: $black-color
 	transition: all .3s ease
+	outline: none
 	&:active,&:hover
 		color: $accent-color
 		text-decoration: none
@@ -85,7 +86,8 @@ input,button,select,textarea
 	border: 0
 	padding: 0.5rem
 	background: transparent
-	outline: none
+	outline: none!important
+	border-radius: 0
 
 iframe,img
 	max-width: 100%
@@ -109,20 +111,115 @@ iframe,img
 	top: 0
 	height: 100%
 	width: 100%
+	
+.с-wrapper
+	
+.c-main
+
+.c-title
+	
+.c-form
+	input
+		opacity: 0.5
+		color: #333
+		border-bottom: 1px solid #eedddb
+		min-width: 213px
+		padding: 5px 0
+		&:focus
+			opacity: 1
+			& + span
+				top: -12px
+				left: 0
+				font-size: 10px
+		&:not([value=""])
+			opacity: 1
+			& + span
+				top: -12px
+				left: 0
+				font-size: 10px
+	label
+		position: relative
+		width: 100%
+		& span 
+			position: absolute
+			color: #333
+			opacity: 0.5
+			top: 5px
+			left: 0
+			transition: all .3s ease
+	textarea
+		opacity: 0.5
+		display: block
+		width: 100%
+		color: #333
+		border-bottom: 1px solid #eedddb
+		height: 36px
+		padding: 5px 0
+		&:focus
+			opacity: 1
+			& + span
+				top: -12px
+				left: 0
+				font-size: 10px
+		&:not([value=""])
+			opacity: 1
+			& + span
+				top: -12px
+				left: 0
+				font-size: 10px
+	&__row
+		display: flex
+		justify-content: space-between
+		margin-bottom: 27px
+		+sm
+			flex-wrap: wrap
+			margin-bottom: 0px
+			
+	&__agreement
+		text-align: center
+		opacity: 0.2
+		color: #777777
+		font-size: rem(12)
+		margin-top: rem(12)
+		width: 100%
+		+sm
+			line-height: 15px
+			margin-top: rem(10)
+		a
+			color: #777777
+			text-decoration: underline
+			&:hover
+				color: $accent-color
+				text-decoration: none
 
 
-// МОДУЛИ
-// Стили шапки
-@import 'modules/_header'
+.tns-outer [aria-controls]
+	width: 18px
+	height: 18px
+	background: #F0F7F1
+	border-radius: 50%
+	margin-left: 40px
+	transition: all .3s ease
+	outline: none
+	&:hover
+		background: #71AF79
+	&.tns-nav-active
+		background: #71AF79
+	+sm
+		width: 14px
+		height: 14px
+		margin-left: 30px
+.tns-nav
+	display: flex
+	justify-content: center
+	margin-left: -40px
+	margin-top: 48px
+	+sm
+		margin-left: -30px
+		margin-top: 20px
 
-// Стили футера
-@import 'modules/_footer'
+.tns-slide-active:first-child,.tns-slide-active:last-child
+	opacity: .2
 
-//Компоненты
-@import 'modules/_nav'
-@import "components/_components"
-
-// СТРАНИЦЫ
-// Стили главной страницы
-@import 'pages/_index'
-
+[hidden]
+	display: none

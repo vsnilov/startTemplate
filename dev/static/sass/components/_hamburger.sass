@@ -1,0 +1,157 @@
+$hamburger-padding-x           : 0px !default;
+$hamburger-padding-y           : 0px !default;
+$hamburger-layer-width         : 37px !default;
+$hamburger-layer-height        : 2px !default;
+$hamburger-layer-spacing       : 10px !default;
+$hamburger-layer-color         : #777777 !default;
+$hamburger-layer-border-radius : 4px !default;
+$hamburger-hover-opacity       : 0.7 !default;
+$hamburger-active-layer-color  : #777777 !default;
+$hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
+
+
+$hamburger-hover-use-filter   : false !default;
+$hamburger-hover-filter       : opacity(50%) !default;
+$hamburger-active-hover-filter: $hamburger-hover-filter !default;
+
+// ==================================================
+.hamburger
+  padding: $hamburger-padding-y $hamburger-padding-x
+  display: inline-block
+  cursor: pointer
+
+  transition-property: opacity, filter
+  transition-duration: 0.15s
+  transition-timing-function: linear
+
+  // Normalize (<button>)
+  font: inherit
+  color: inherit
+  text-transform: none
+  background-color: transparent
+  border: 0
+  margin: 0
+  overflow: visible
+  position: relative
+  top: 5px
+  display: none
+  @include sm
+    transform: scale(.75)
+  
+
+  &:hover
+    @if $hamburger-hover-use-filter == true
+      filter: $hamburger-hover-filter
+    @else
+      opacity: $hamburger-hover-opacity
+
+  &.is-active
+    &:hover
+      @if $hamburger-hover-use-filter == true
+        filter: $hamburger-active-hover-filter
+      @else
+        opacity: $hamburger-active-hover-opacity
+
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after
+      background-color: $hamburger-active-layer-color
+
+.hamburger-box
+  width: $hamburger-layer-width
+  height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2
+  display: inline-block
+  position: relative
+
+.hamburger-inner
+    display: block
+    top: 50%
+    margin-top: $hamburger-layer-height / -2
+    //margin-left: -11px
+    background: $hamburger-layer-color
+    &,
+    &::before,
+    &::after
+        width: $hamburger-layer-width
+        height: $hamburger-layer-height
+        background-color: $hamburger-layer-color
+        border-radius: $hamburger-layer-border-radius
+        position: absolute
+        transition-property: transform
+        transition-duration: 0.15s
+        transition-timing-function: ease
+    &::before,
+    &::after
+        content: ""
+        display: block
+
+    &::before
+        top: ($hamburger-layer-spacing + $hamburger-layer-height) * -1
+
+    &::after
+        bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1
+
+.hamburger--slider
+    .hamburger-inner
+      top: $hamburger-layer-height / 2
+
+      &::before
+        top: $hamburger-layer-height + $hamburger-layer-spacing
+        transition-property: transform, opacity
+        transition-timing-function: ease
+        transition-duration: 0.15s
+
+      &::after
+        
+        top: ($hamburger-layer-height * 2) + ($hamburger-layer-spacing * 2)
+      
+
+    &.is-active
+      .hamburger-inner
+        $y-offset: $hamburger-layer-spacing + $hamburger-layer-height
+
+        transform: translate3d(0, $y-offset, 0) rotate(45deg)
+
+        &::before
+          transform: rotate(-45deg) translate3d($hamburger-layer-width / -7, $hamburger-layer-spacing * -1, 0)
+          opacity: 0
+
+        &::after 
+          transform: translate3d(0, $y-offset * -2, 0) rotate(-90deg)
+
+.hamburger--emphatic
+    overflow: hidden
+    .hamburger-inner
+        transition: background-color 0.125s 0.175s ease-in
+        &::before
+            left: 0
+            transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, left 0.125s 0.175s ease-in
+
+        &::after
+            top: ($hamburger-layer-height) + ($hamburger-layer-spacing)
+            right: 0
+            transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, right 0.125s 0.175s ease-in
+
+    &.is-active
+        .hamburger-inner
+            transition-delay: 0s
+            transition-timing-function: ease-out
+            background-color: transparent !important
+
+            &::before
+                left: $hamburger-layer-width * -2
+                top: $hamburger-layer-width * -2
+                transform: translate3d($hamburger-layer-width * 2, $hamburger-layer-width * 2, 0) rotate(45deg)
+                transition: left 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1)
+
+            &::after
+                right: $hamburger-layer-width * -2
+                top: $hamburger-layer-width * -2
+                transform: translate3d($hamburger-layer-width * -2, $hamburger-layer-width * 2, 0) rotate(-45deg)
+                transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1)
+
+@include lg
+    .hamburger
+        display: block
+
+@include sm

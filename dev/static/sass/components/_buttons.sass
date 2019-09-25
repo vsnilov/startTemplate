@@ -1,0 +1,21 @@
+.c-btn
+    display: inline-block
+    font-weight: 700
+    color: $accent-color
+    border-radius: rem(115)
+    border: 1px solid $accent-color
+    padding: rem(16) rem(16) rem(15)
+    min-width: 243px
+    transition: all .3s ease
+    text-align: center
+    +md
+        min-width: 200px
+    &:hover
+        background: $accent-color
+        color: #fff
+    &--accent
+        color: $main-color
+        border-color: $main-color
+        &:hover
+            background: $main-color
+            color: #fff

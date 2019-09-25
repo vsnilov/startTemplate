@@ -19,12 +19,12 @@ module.exports = function () {
 			.on('end', $.browserSync.reload);
 	});
 
+	//если есть библиотеки нажно добавить таск в gulpfile.js  - 'sassLibs'
 	$.gulp.task('sassLibs', function(){
-		return $.gulp.src([
-			'node_modules/bootstrap/dist/css/bootstrap.css',
-			//'node_modules/owl.carousel2/dist/assets/owl.carousel.css',
-			//'node_modules/lightgallery/dist/css/lightgallery.css',
-			//'node_modules/magnific-popup/dist/magnific-popup.css',
+		$.gulp.src([
+			//'node_modules/bootstrap/dist/css/bootstrap-reboot.min.css',
+			//'node_modules/bootstrap/dist/css/bootstrap-grid.min.css',
+			//node_modules/tiny-slider/dist/tiny-slider.css',
 			])
 			.pipe($.plugin.autoprefixer({//автоматически добавляет вендорные префиксы к CSS свойствам
 				browsers: ['last 10 versions', '> 5%', 'ie 8'],
@@ -33,8 +33,7 @@ module.exports = function () {
 			.pipe($.plugin.csscomb())
 			.pipe($.plugin.csso())//minify css, объединение правил для селекторов
 			.pipe($.plugin.concat('libs.css'))
-			.pipe($.gulp.dest('./build/static/css/'))//куда
-
+			.pipe($.gulp.dest('./build/static/css/')) //куда
 	});
 
 	

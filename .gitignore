@@ -1,8 +1,10 @@
 yarn-error.log
 yarn.lock
+.idea
 .vscode
 .git
 .gulp
 backstop_data
 build
 node_modules
+.DS_Store
