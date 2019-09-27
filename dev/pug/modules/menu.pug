@@ -1,6 +1,7 @@
 .c-menu#js-menu
-    nav.c-nav#js-menuWrap
-        ul.c-menu__main
-            each link,title in nav.navPages
-                li.c-menu__item
-                    a.c-menu__link(href="javascript:void(0)" data-scroll-to=link)= title
+    .container
+        nav.c-nav#js-menuWrap
+            ul.c-menu__main
+                each link,title in nav.navPages
+                    li.c-menu__item
+                        a.c-menu__link(href=link data-scroll)= title

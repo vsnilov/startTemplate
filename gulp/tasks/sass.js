@@ -20,20 +20,20 @@ module.exports = function () {
 	});
 
 	//если есть библиотеки нажно добавить таск в gulpfile.js  - 'sassLibs'
-	$.gulp.task('sassLibs', function(){
-		$.gulp.src([
+	$.gulp.task('sassLibs', function () {
+		return $.gulp.src([
+			'node_modules/normalize.css/normalize.css',
+			//'node_modules/tiny-slider/dist/tiny-slider.css',
 			//'node_modules/bootstrap/dist/css/bootstrap-reboot.min.css',
 			//'node_modules/bootstrap/dist/css/bootstrap-grid.min.css',
-			//node_modules/tiny-slider/dist/tiny-slider.css',
-			])
-			.pipe($.plugin.autoprefixer({//автоматически добавляет вендорные префиксы к CSS свойствам
-				browsers: ['last 10 versions', '> 5%', 'ie 8'],
-				cascade: true
+		])
+			.pipe($.plugin.autoprefixer({
+			  browsers: ['last 10 versions', '> 5%', 'ie 8'],
+			  cascade: true
 			}))
-			.pipe($.plugin.csscomb())
-			.pipe($.plugin.csso())//minify css, объединение правил для селекторов
+			.pipe($.plugin.csso())
 			.pipe($.plugin.concat('libs.css'))
-			.pipe($.gulp.dest('./build/static/css/')) //куда
+			.pipe($.gulp.dest('./build/static/css/'))
 	});
 
 	

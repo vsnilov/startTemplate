@@ -31,6 +31,7 @@
 Библиотеки установленные
 =====================
 	"svg4everybody": "^2.1.9"
+	"normalize.css": "^8.0.1"
 
 Библиотеки часто использумые js
 =====================
@@ -47,3 +48,4 @@
 =====================
 	https://github.com/twbs/bootstrap - bootstrap
 	https://github.com/jonsuh/hamburgers - hamburgers
+	https://github.com/necolas/normalize.css - normalize.css
