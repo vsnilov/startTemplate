@@ -1,14 +1,14 @@
 "use strict";
-window.onload = function () {
-    var images = document.querySelectorAll('img');
+
+window.addEventListener('load', function () {
+    var images = document.querySelectorAll('img.js-lazyLoad');
     var options = {
         root: null,
-        rootMargin: '300px',
+        rootMargin: '500px',
         threshold: 0.1
     };
 
     var fetchImage = function fetchImage(url) {
-        //console.log(url);
         return new Promise(function (resolve, reject) {
             var image = new Image();
             image.src = url;
@@ -19,9 +19,8 @@ window.onload = function () {
 
     var loadImage = function loadImage(image) {
         var src = image.dataset.src;
-        image.classList.remove('preload');
+        image.classList.remove('js-lazyLoad');
         fetchImage(src).then(function () {
-          //  console.log(src);
             image.src = src;
         });
     };
@@ -38,13 +37,13 @@ window.onload = function () {
     images.forEach(function (img) {
         observer.observe(img);
     });
-};
+});
 
 function loadImg() {
-    $('.preload').each(function (key, value) {
+    $('.js-lazyLoad').each(function (key, value) {
         var srcReal = $(this).attr('data-src');
         $(this).animate({opacity: 'hide'}, 0);
-        $(this).attr('src', srcReal).removeClass('preload');
+        $(this).attr('src', srcReal).removeClass('js-lazyLoad');
         $(this).animate({opacity: 'show'}, 1000);
     });
 }
