@@ -43,6 +43,7 @@
 	https://github.com/ghosh/Micromodal - модалка
 	https://github.com/cferdinandi/smooth-scroll/ - плавный скролл
 	https://github.com/juliangarnier/anime - anime.js
+	https://github.com/dimsemenov/PhotoSwipe - галерея
 
 Библиотеки часто использумые css
 =====================
