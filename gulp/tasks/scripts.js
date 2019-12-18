@@ -32,16 +32,16 @@ module.exports = function () {
 	});
 
 	$.gulp.task('js:webpack', () => {
-		return $.gulp.src('./dev/static/js/index.js')
+		return $.gulp.src('./dev/static/js/main.js')
 		  .pipe($.webpackStream($.webpackConfig), $.webpack)
 		  .pipe($.gulp.dest('./build/static/js/'))
 		  .pipe($.browserSync.reload({
-			stream: true
+			  stream: true
 			})
 			);
 	});
 
-	  
+
 	$.gulp.task('js:copy', () => {
 		return $.gulp.src(['./dev/static/js/*.js',
 			'!./dev/static/js/libs.min.js'])

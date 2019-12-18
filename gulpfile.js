@@ -21,7 +21,7 @@ $.path.task.forEach(function(taskPath) {
 //сборка для разработки
 $.gulp.task('dev', $.gulp.series(
 	'clean',
-	$.gulp.parallel('pug', 'sass:dev', 'libsJS:dev', 'js:copy', 'img:dev', 'svg','fonts','sassLibs')));
+	$.gulp.parallel('pug', 'sass:dev', 'js:webpack', 'libsJS:dev', 'js:copy', 'img:dev', 'svg','fonts','sassLibs')));
 
 //сборка для пользователя
 $.gulp.task('build', $.gulp.series(
