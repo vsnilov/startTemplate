@@ -1,0 +1,32 @@
+@function derive-rgb-values-from-hex($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+//цвета
+$color-primary: red;
+$color-link: green;
+$color-black: #333;
+
+:root {
+  --color-primary: #{$color-primary};
+  --color-primary-rgb: #{derive-rgb-values-from-hex($color-primary)};
+  --color-link: #{$color-link};
+  --color-link-rgb: #{derive-rgb-values-from-hex($color-link)};
+  --color-back: #{$color-black};
+  --color-black-rgb: #{derive-rgb-values-from-hex($color-black)};
+}
+
+//шрифты
+$font:	"RobotoRegular", sans-serif;
+$fontR: "RobotoRegular", sans-serif;
+$fontL: "RobotoLight", sans-serif;
+$fontM: "RobotoMedium", sans-serif;
+$fontB: "RobotoBold", sans-serif;
+
+//шрифты рубля
+$fontRD: "PTRoubleDecorative", sans-serif;
+$fontRS: "PTRoubleSans", sans-serif;
+$fontRR: "PTRoubleSerif", sans-serif;
+
+//rem
+$baseFontSizePx: 16px;
+$baseFontSize: 16;

@@ -1,0 +1,22 @@
+{
+  "paths": {
+    "src": {
+      "base": "./src/",
+      "pug": "./src/pug/",
+      "scss": "./src/static/scss/",
+      "js": "./src/static/js/",
+      "font": "./src/static/fonts/**/*",
+      "img": "./src/static/images/**/*.{png,PNG,jpg,jpeg,JPG,gif,svg,ico}",
+      "svg": "./src/static/images/**/*.svg"
+    },
+    "build": {
+      "base": "./dist/",
+      "html": "./dist/",
+      "css": "./dist/static/css/",
+      "js": "./dist/static/js/",
+      "font": "./dist/static/fonts/",
+      "img": "./dist/static/images/",
+      "svg": "./dist/static/images/svg/"
+    }
+  }
+}

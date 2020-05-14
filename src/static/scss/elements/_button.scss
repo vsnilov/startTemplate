@@ -1,0 +1,15 @@
+.e-btn {
+  display: inline-block;
+  font-weight: 700;
+  color: $accent-color;
+  border: 1px solid $accent-color;
+  padding: rem(15);
+  min-width: 230px;
+  transition: all .3s ease;
+  text-align: center;
+
+  &:hover {
+    background: $accent-color;
+    color: #fff;
+  }
+}
