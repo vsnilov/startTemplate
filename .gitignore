@@ -1,15 +1,19 @@
+# Файлы и папки операционной системы
 .DS_Store
+Thumbs.db
+
+# Вспомогательные файлы
+*.log*
 node_modules/
-dist/
 npm-debug.log
 yarn-error.log
 package-lock.json
 yarn.lock
 
-# Editor directories and files
+# Папка с собранными файлами проекта
+dist/
+
+# Файлы редактора
 .idea
+*.sublime*
 .vscode
-*.suo
-*.ntvs*
-*.njsproj
-*.sln

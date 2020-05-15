@@ -1,11 +1,11 @@
 #form.modal.micromodal-slide(aria-hidden='true')
   .modal__overlay(tabindex='-1' data-micromodal-close='')
-    .modal__container.modal__container--big(role='dialog' aria-modal='true' aria-labelledby='modal-1-title')
+    .modal__container.modal__container--big(role='dialog' aria-modal='true')
       header.modal__header
         .modal__title
           | TITLE
         button.modal__close(aria-label='Закрыть' data-micromodal-close='')
-      main.modal__content
+      div.modal__content
         form.c-form
           .c-form__row
             label
@@ -17,11 +17,11 @@
             label
               input(type="email",name="email",onkeyup="this.setAttribute('value', this.value);", value="")
               span E-mail
-          label   
-            textarea(name="comment",onkeyup="this.setAttribute('value', this.value);", value="")
+          label
+            textarea(name="comment", onkeyup="this.setAttribute('value', this.value);")
             span Комментарий
           button.c-btn.c-btn--accent Отправить
-          .c-form__agreement Нажимая "Отправить" Вы соглашаетесь с 
+          .c-form__agreement Нажимая "Отправить" Вы соглашаетесь с
             a(href="/agreement/",target="_blank") обработкой персональных данных
-      .modal__success 
+      .modal__success
         span Ваша заявка отправлена
