@@ -1,4 +1,8 @@
 .e-icon {
   display: inline-block;
   vertical-align: middle;
+
+  &-primary {
+    fill: var(--color-primary)
+  }
 }

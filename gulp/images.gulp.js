@@ -5,8 +5,7 @@ import gulpIf from 'gulp-if';
 const isDebug = process.env.NODE_ENV !== 'production';
 
 gulp.task('images', () => (
-  gulp.src(pathsSRC.img)
+  gulp.src(`${pathsSRC.img}**/*.{png,PNG,jpg,jpeg,JPG,gif,svg,ico}`)
   .pipe(gulpIf(!isDebug, image()))
   .pipe(gulp.dest(pathsBUILD.img))
-  .on('change', gulp.series('reload'))
 ));

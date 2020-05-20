@@ -59,11 +59,11 @@ if (!isProduction) {
 
 const options = {
   entry: {
-    main: `${pathsSRC.js}/main.js`
+    main: `${global.pathsSRC.js}/index.js`
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js',
+    filename: 'bundle.js',
     library: '[name]'
   },
   resolve: {

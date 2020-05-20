@@ -16,7 +16,7 @@ const processors = [flexbugs, animation, autoprefixer];
 gulp.task('scss', () =>
   gulp
   .src(`${pathsSRC.scss}*.scss`)
-  .pipe(concat('main.scss'))
+  .pipe(concat('style.scss'))
   .pipe(
     sass({
       includePaths: ['node_modules'],

@@ -6,8 +6,8 @@
       "scss": "./src/static/scss/",
       "js": "./src/static/js/",
       "font": "./src/static/fonts/**/*",
-      "img": "./src/static/images/**/*.{png,PNG,jpg,jpeg,JPG,gif,svg,ico}",
-      "svg": "./src/static/images/**/*.svg"
+      "img": "./src/static/img/",
+      "svg": "./src/static/img/svg/"
     },
     "build": {
       "base": "./dist/",
@@ -15,8 +15,8 @@
       "css": "./dist/static/css/",
       "js": "./dist/static/js/",
       "font": "./dist/static/fonts/",
-      "img": "./dist/static/images/",
-      "svg": "./dist/static/images/svg/"
+      "img": "./dist/static/img/",
+      "svg": "./dist/static/img/svg/"
     }
   }
 }

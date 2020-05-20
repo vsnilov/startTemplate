@@ -1,4 +1,5 @@
 include ../mixins
+include ../constants.pug
 block variables
 
 doctype html
@@ -19,22 +20,21 @@ html(lang="ru")
     meta(property="og:video" content=`${og_video}`)
     meta(property="og:site_name" content=`${og_site_name}`)
 
-    link(rel="stylesheet" type='text/css' href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap&subset=cyrillic")
-    link(rel="stylesheet" type='text/css' href="static/css/main.css")
+    link(rel="stylesheet" type='text/css' href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap")
+    link(rel="stylesheet" type='text/css' href="static/css/style.css")
 
     <!--[if lt IE 9]>
       script(src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
     <![endif]-->
   body
-    .g-wrapper
+    #app.g-wrapper
       include ../modules/header
-      #app
       main.g-main
         block content
       include ../modules/footer
     .hide
       include ../modules/modal
 
-    script(src="static/js/main.js")
+    script(src="static/js/bundle.js")
 
     block script

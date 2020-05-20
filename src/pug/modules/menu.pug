@@ -1,7 +1,5 @@
-.c-menu#js-menu
-    .container
-        nav.c-nav#js-menuWrap
-            ul.c-menu__main
-                each link,title in nav.navPages
-                    li.c-menu__item
-                        a.c-menu__link(href=link data-scroll)= title
+nav.g-menu
+  ul.g-menu__list
+    each link,title in nav.navPages
+      li.g-menu__item
+        a.g-menu__link(href=link data-scroll)= title

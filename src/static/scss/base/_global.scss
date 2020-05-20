@@ -1,7 +1,10 @@
-body {
-  font-size: $baseFontSizePx;
-  font-family: $fontR;
+html {
+  font-size: var(--font-size);
+  font-family: $font;
   font-weight: 400;
+}
+
+body {
   -webkit-overflow-scrolling: touch;
   color: var(--color-back);
 }
@@ -93,8 +96,12 @@ textarea {
   padding: 0;
   margin: 0;
   background: transparent;
-  outline: none !important;
+  outline: none;
   border-radius: 0;
+}
+
+button {
+  cursor: pointer;
 }
 
 iframe,
@@ -113,10 +120,15 @@ img {
 
 .container {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1170px;
+  padding: 0 115px 0 125px;
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
+}
+
+.rub {
+  font-family: $fontRub;
 }

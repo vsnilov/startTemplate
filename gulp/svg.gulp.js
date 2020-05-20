@@ -38,5 +38,4 @@ gulp.task('svg', () => {
       })
     )
     .pipe(gulp.dest(`${pathsBUILD.svg}`))
-    .on('change', gulp.series('reload'))
 });
