@@ -4,8 +4,8 @@ import gulpIf from 'gulp-if';
 
 const isDebug = process.env.NODE_ENV !== 'production';
 
-gulp.task('images', () => (
-  gulp.src(`${pathsSRC.img}**/*.{png,PNG,jpg,jpeg,JPG,gif,svg,ico}`)
+gulp.task('image', () => (
+  gulp.src(`${global.pathsSRC.img}**/*.{png,PNG,jpg,jpeg,JPG,gif,svg,ico}`)
   .pipe(gulpIf(!isDebug, image()))
-  .pipe(gulp.dest(pathsBUILD.img))
+  .pipe(gulp.dest(global.pathsBUILD.img))
 ));

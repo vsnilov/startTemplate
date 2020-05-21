@@ -1,18 +1,18 @@
-import gulp, {
-  watch
-} from 'gulp';
+import gulp from 'gulp';
 
 gulp.task('watch', () => {
-  gulp.series('scripts');
-  watch(`${pathsSRC.pug}**/*.pug`, gulp.series('pug'));
-  watch(`${pathsSRC.scss}**/*.scss`, gulp.series('scss'));
-  watch(`${pathsSRC.fonts}`, gulp.series('copy'));
-  watch(`${pathsSRC.img}**/*.{png,PNG,jpg,jpeg,JPG,gif,svg,ico}`, gulp.series('images'));
-  watch(`${pathsSRC.svg}*.svg`, gulp.series('svg'));
+  gulp.series('js');
+  gulp.watch(`${global.pathsSRC.pug}**/*.pug`, gulp.series('pug'));
+  gulp.watch(`${global.pathsSRC.scss}**/*.scss`, gulp.series('scss'));
+  gulp.watch(`${global.pathsSRC.font}`, gulp.series('font'));
+  gulp.watch(`${global.pathsSRC.img}**/*.{png,PNG,jpg,jpeg,JPG,gif,svg,ico}`, gulp.series(
+    'image'));
+  gulp.watch(`${global.pathsSRC.svg}*.svg`, gulp.series('svg'));
 
-  watch(`${pathsBUILD.base}*.html`).on('change', gulp.series('reload'));
-  watch(`${pathsBUILD.css}*.css`).on('change', gulp.series('reload'));
-  watch(`${pathsBUILD.img}**/*.{png,PNG,jpg,jpeg,JPG,gif,svg,ico}`).on('change', gulp.series(
-    'reload'));
-  watch(`${pathsBUILD.js}*.js`).on('change', gulp.series('reload'));
+
+  gulp.watch(`${global.pathsBUILD.img}**/*.{png,PNG,jpg,jpeg,JPG,gif,svg,ico}`).on('change',
+    gulp
+    .series(
+      'reload'));
+  gulp.watch(`${global.pathsBUILD.js}*.js`).on('change', gulp.series('reload'));
 });

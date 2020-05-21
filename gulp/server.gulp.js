@@ -10,7 +10,7 @@ gulp.task('server', () => {
       scroll: false,
       location: false,
     },
-    server: `${pathsBUILD.base}`,
+    server: `${global.pathsBUILD.base}`,
   });
 });
 

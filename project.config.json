@@ -5,7 +5,7 @@
       "pug": "./src/pug/",
       "scss": "./src/static/scss/",
       "js": "./src/static/js/",
-      "font": "./src/static/fonts/**/*",
+      "font": "./src/static/font/**/*",
       "img": "./src/static/img/",
       "svg": "./src/static/img/svg/"
     },
@@ -14,7 +14,7 @@
       "html": "./dist/",
       "css": "./dist/static/css/",
       "js": "./dist/static/js/",
-      "font": "./dist/static/fonts/",
+      "font": "./dist/static/font/",
       "img": "./dist/static/img/",
       "svg": "./dist/static/img/svg/"
     }

@@ -1,4 +1,5 @@
 import gulp from 'gulp';
+import browserSync from 'browser-sync';
 import notify from 'gulp-notify';
 import pug from 'gulp-pug';
 import fs from 'fs';
@@ -8,8 +9,10 @@ import bemValidator from 'gulp-html-bem-validator';
 
 gulp.task('pug', () => {
   return gulp
-    .src(`${pathsSRC.pug}/pages/*.pug`)
-    .pipe(pugLinter({ reporter: 'default' }))
+    .src(`${global.pathsSRC.pug}/pages/*.pug`)
+    .pipe(pugLinter({
+      reporter: 'default'
+    }))
     .pipe(
       pug({
         locals: {
@@ -28,5 +31,8 @@ gulp.task('pug', () => {
         message: 'Error: <%= error.message %>',
       })
     )
-    .pipe(gulp.dest(`${pathsBUILD.html}`));
+    .pipe(gulp.dest(`${global.pathsBUILD.html}`))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
 });

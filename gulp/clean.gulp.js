@@ -3,6 +3,6 @@ import del from 'del';
 
 gulp.task('clean', () => (
   del([
-    `${pathsBUILD.base}`
+    `${global.pathsBUILD.base}`
   ])
 ));

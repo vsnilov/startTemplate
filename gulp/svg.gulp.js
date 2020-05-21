@@ -6,7 +6,7 @@ import svgSprite from 'gulp-svg-sprite';
 
 gulp.task('svg', () => {
   return gulp
-    .src(`${pathsSRC.svg}*.svg`)
+    .src(`${global.pathsSRC.svg}*.svg`)
     .pipe(
       svgmin({
         js2svg: {
@@ -37,5 +37,5 @@ gulp.task('svg', () => {
         },
       })
     )
-    .pipe(gulp.dest(`${pathsBUILD.svg}`))
+    .pipe(gulp.dest(`${global.pathsBUILD.svg}`))
 });

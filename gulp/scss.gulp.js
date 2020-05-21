@@ -1,4 +1,5 @@
 import gulp from 'gulp';
+import browserSync from 'browser-sync';
 import gulpIf from 'gulp-if';
 import sass from 'gulp-sass';
 import base64 from 'gulp-css-base64';
@@ -15,7 +16,7 @@ const processors = [flexbugs, animation, autoprefixer];
 
 gulp.task('scss', () =>
   gulp
-  .src(`${pathsSRC.scss}*.scss`)
+  .src(`${global.pathsSRC.scss}*.scss`)
   .pipe(concat('style.scss'))
   .pipe(
     sass({
@@ -33,6 +34,8 @@ gulp.task('scss', () =>
     )
   )
   .pipe(gulpIf(!isDebug, csso()))
-  .pipe(gulp.dest(`${pathsBUILD.css}`))
-  .on('change', gulp.series('reload'))
+  .pipe(gulp.dest(`${global.pathsBUILD.css}`))
+  .pipe(browserSync.reload({
+    stream: true
+  }))
 );

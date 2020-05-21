@@ -11,11 +11,11 @@ gulp.task(
   'default',
   gulp.series(
     'clean',
-    gulp.parallel('server', 'scss', 'scripts', 'images', 'svg', 'pug', 'copy', 'watch')
+    gulp.parallel('server', 'scss', 'js', 'image', 'svg', 'pug', 'font', 'watch')
   )
 );
 
 gulp.task(
   'build',
-  gulp.series('clean', gulp.parallel('scss', 'scripts', 'images', 'svg', 'pug', 'copy'))
+  gulp.series('clean', gulp.parallel('scss', 'js', 'image', 'svg', 'pug', 'font'))
 );
