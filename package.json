@@ -10,7 +10,6 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development gulp",
     "build": "cross-env NODE_ENV=production gulp build",
-    "assets": "cross-env NODE_ENV=production gulp assets",
     "lint": "eslint src/**/*.{js,vue} --fix && stylelint src/**/*.scss --fix"
   },
   "husky": {
@@ -34,9 +33,12 @@
     "eslint": "^6.1.0",
     "eslint-config-airbnb": "^18.0.0",
     "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^7.0.0-alpha.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "2.5.0",
     "expose-loader": "^0.7.5",
     "gulp": "^4.0.2",
     "gulp-cheerio": "^0.6.3",
@@ -58,18 +60,18 @@
     "gulp-w3c-html-validator": "^2.0.1",
     "hard-source-webpack-plugin": "^0.13.1",
     "husky": "^4.2.3",
-    "import-dir": "^0.0.1",
     "imports-loader": "^0.8.0",
     "postcss-animation": "^0.0.12",
     "postcss-flexbugs-fixes": "^4.1.0",
-    "postcss-normalize": "^9.0.0",
     "prettier": "^1.18.2",
+    "pug": "2.0.4",
     "pug-lint": "^2.6.0",
+    "pug-plain-loader": "^1.0.0",
     "require-dir": "^1.2.0",
-    "stylelint": "^13.2.1",
+    "stylelint": "^8.0.0",
     "stylelint-config-airbnb": "^0.0.0",
-    "stylelint-order": "^4.0.0",
-    "stylelint-scss": "^3.16.0",
+    "stylelint-order": "^0.7.0",
+    "stylelint-scss": "^1.2.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "vue-loader": "^15.4.2",
     "vue-template-compiler": "^2.5.17",
@@ -81,6 +83,7 @@
     "jquery": "^3.4.1",
     "normalize.css": "^8.0.1",
     "svg4everybody": "^2.1.9",
-    "vue": "^2.5.17"
+    "vue": "^2.5.17",
+    "vue-tiny-slider": "0.1.39"
   }
 }
