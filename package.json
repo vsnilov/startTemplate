@@ -34,11 +34,11 @@
     "eslint-config-airbnb": "^18.0.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-vue": "^7.0.0-alpha.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "2.5.0",
+    "eslint-plugin-vue": "^7.0.0-alpha.0",
     "expose-loader": "^0.7.5",
     "gulp": "^4.0.2",
     "gulp-cheerio": "^0.6.3",
@@ -83,7 +83,6 @@
     "jquery": "^3.4.1",
     "normalize.css": "^8.0.1",
     "svg4everybody": "^2.1.9",
-    "vue": "^2.5.17",
-    "vue-tiny-slider": "0.1.39"
+    "vue": "^2.5.17"
   }
 }
