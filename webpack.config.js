@@ -75,7 +75,7 @@ const options = {
   devtool: 'inline-source-map',
   module: {
     rules: [{
-        test: /.+\.js/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
