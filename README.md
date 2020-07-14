@@ -45,6 +45,7 @@
 	https://github.com/cferdinandi/smooth-scroll/ - плавный скролл
 	https://github.com/juliangarnier/anime - anime.js
 	https://github.com/dimsemenov/PhotoSwipe - галерея
+  https://github.com/aFarkas/lazysizes - lazyload
 
 Библиотеки часто использумые css
 =====================
