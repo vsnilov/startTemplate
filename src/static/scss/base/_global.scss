@@ -1,7 +1,7 @@
 html {
   font-size: var(--font-size);
-  font-family: $font;
-  font-weight: 400;
+  font-family: $font-base;
+  background: red;
 }
 
 body {
@@ -130,5 +130,5 @@ img {
 }
 
 .rub {
-  font-family: $fontRub;
+  font-family: $font-rub;
 }
