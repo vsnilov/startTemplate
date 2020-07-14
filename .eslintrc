@@ -9,6 +9,7 @@
     "plugin:vue/vue3-recommended"
   ],
   "rules": {
+    "no-comma": "off",
     "no-console": "error",
     "no-alert": "error",
     "func-names": [

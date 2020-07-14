@@ -1,15 +1,15 @@
 {
   "name": "start-template",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Start template for front-end",
   "main": "gulpfile.js",
   "repository": "https://github.com/vn38/startTemplate",
   "author": "Vladislav Nilov",
   "license": "MIT",
-  "browserslist": "last 2 versions",
+  "browserslist": "last 5 versions",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development gulp",
-    "build": "cross-env NODE_ENV=production gulp build",
+    "dev": "gulp",
+    "build": "gulp build",
     "lint": "eslint src/**/*.{js,vue} --fix && stylelint src/**/*.scss --fix"
   },
   "husky": {
@@ -80,6 +80,7 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.10.4",
     "jquery": "^3.4.1",
     "normalize.css": "^8.0.1",
     "svg4everybody": "^2.1.9",

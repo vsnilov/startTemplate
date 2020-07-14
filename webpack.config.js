@@ -1,16 +1,13 @@
-const path = require('path');
-const webpack = require('webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
-const {
-  VueLoaderPlugin
-} = require('vue-loader');
-
-const dotenv = require("dotenv");
+const path = require('path')
+const webpack = require('webpack')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
+const { VueLoaderPlugin } = require('vue-loader')
+const dotenv = require("dotenv")
 
 dotenv.config();
 
-const isProduction = process.env.NODE_ENV !== 'development';
+const isProduction = process.env.NODE_ENV !== 'development'
 
 const UglifyConfig = new UglifyJsPlugin({
   cache: true,
@@ -59,7 +56,7 @@ if (!isProduction) {
 
 const options = {
   entry: {
-    main: `${global.pathsSRC.js}/index.js`
+    main: ["@babel/polyfill", `${global.pathsSRC.js}/index.js`]
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -72,7 +69,7 @@ const options = {
     },
   },
   mode: process.env.NODE_ENV,
-  devtool: 'inline-source-map',
+  devtool: isProduction ? !isProduction :'inline-source-map',
   module: {
     rules: [{
         test: /\.js$/,

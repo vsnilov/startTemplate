@@ -2,6 +2,7 @@ import gulp from 'gulp';
 import requireDir from 'require-dir';
 
 global.config = require('./project.config.json');
+
 global.pathsSRC = global.config.paths.src;
 global.pathsBUILD = global.config.paths.build;
 
