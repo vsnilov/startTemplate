@@ -10,7 +10,7 @@ import autoprefixer from 'autoprefixer';
 import concat from 'gulp-concat';
 import flexbugs from 'postcss-flexbugs-fixes';
 import animation from 'postcss-animation';
-import sourcemaps from 'gulp-sourcemaps';
+import gulpSourcemaps from 'gulp-sourcemaps'
 
 const isDebug = process.env.NODE_ENV !== 'production';
 const processors = [flexbugs, animation, autoprefixer];
@@ -23,14 +23,14 @@ gulp.task('scss', () =>
     `${global.pathsSRC.scss}fonts.scss`,
     `${global.pathsSRC.scss}**/*.scss`
   ])
-  .pipe(gulpIf(isDebug,sourcemaps.init()))
+  .pipe(gulpIf(isDebug, gulpSourcemaps.init()))
   .pipe(concat('style.scss'))
   .pipe(
     sass({
       includePaths: ['node_modules'],
     })
   )
-  .pipe(gulpIf(isDebug,sourcemaps.write()))
+  .pipe(gulpIf(isDebug, gulpSourcemaps.write()))
   .pipe(gulpIf(!isDebug, gcmq()))
   .pipe(gulpIf(!isDebug, postcss(processors)))
   .pipe(

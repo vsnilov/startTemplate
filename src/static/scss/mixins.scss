@@ -1,5 +1,5 @@
 @mixin rem($pxsize) {
-  font-size: ($pxsize/$base-font-size)+rem;
+  font-size: ($pxsize/$base-font-size) + rem;
 }
 
 @function rem($pxsize) {
@@ -10,30 +10,30 @@
 //@include font-face("Roboto", "../font/Roboto/RobotoRegular", 400, normal);
 @mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
   @font-face {
-    font-display: swap;
-    font-family: $font-family;
-    src: url("#{$file-path}.woff2") format("woff2"), url("#{$file-path}.woff") format("woff");
     font-weight: $weight;
+    font-family: $font-family;
     font-style: $style;
+    src: url('#{$file-path}.woff2') format('woff2'), url('#{$file-path}.woff') format('woff');
+    font-display: swap;
   }
 }
 
 //@include centered()
-@mixin centered($axis: "both") {
+@mixin centered($axis: 'both') {
   position: absolute;
 
-  @if ($axis == "both") {
+  @if ($axis == 'both') {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
-  @if $axis == "x" {
+  @if $axis == 'x' {
     left: 50%;
     transform: translateX(-50%);
   }
 
-  @if $axis == "y" {
+  @if $axis == 'y' {
     top: 50%;
     transform: translateY(-50%);
   }
@@ -52,11 +52,11 @@
 
 @mixin before() {
   position: absolute;
-  content: "";
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  content: '';
 }
 
 @mixin xl() {

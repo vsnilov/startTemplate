@@ -10,8 +10,8 @@ body {
 
 a {
   color: var(--color-link);
-  cursor: pointer;
   text-decoration: none;
+  cursor: pointer;
 
   &:hover {
     color: var(--color-link-hover);
@@ -38,10 +38,10 @@ p {
   margin: 0;
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
   margin: 0;
+  -webkit-appearance: none;
 }
 
 audio,
@@ -64,19 +64,19 @@ textarea {
 }
 
 ::-moz-selection {
-  background: #b3d4fc;
   text-shadow: none;
+  background: #b3d4fc;
 }
 
 ::selection {
-  background: #b3d4fc;
   text-shadow: none;
+  background: #b3d4fc;
 }
 
 .clearfix:before,
 .clearfix:after {
-  content: " ";
   display: table;
+  content: ' ';
 }
 
 .clearfix:after {
@@ -91,12 +91,12 @@ input,
 button,
 select,
 textarea {
-  border: 0;
-  padding: 0;
   margin: 0;
+  padding: 0;
   background: transparent;
-  outline: none;
+  border: 0;
   border-radius: 0;
+  outline: none;
 }
 
 button {
@@ -118,8 +118,8 @@ img {
 }
 
 .container {
-  margin: 0 auto;
   max-width: 1170px;
+  margin: 0 auto;
   padding: 0 115px 0 125px;
 }
 

@@ -1,13 +1,13 @@
 .e-btn {
   display: inline-block;
-  color: #fff;
-  background-color: var(--color-primary);
-  padding: rem(15);
   min-width: 230px;
-  transition: $transition-base;
+  padding: rem(15);
+  color: #fff;
   text-align: center;
+  background-color: var(--color-primary);
+  transition: $transition-base;
 
   &:hover {
-    opacity: .8;
+    opacity: 0.8;
   }
 }

@@ -1,7 +1,5 @@
 @function derive-rgb-values-from-hex($hex) {
-  @return red($hex),
-    green($hex),
-    blue($hex);
+  @return red($hex), green($hex), blue($hex);
 }
 
 //цвета
@@ -19,13 +17,13 @@ $color-black: #151533;
   --font-size: 16px;
 }
 
-$transition-base: all .3s ease;
+$transition-base: all 0.3s ease;
 
 //шрифты
-$font-base: "Roboto", sans-serif;
+$font-base: 'Roboto', sans-serif;
 
 //шрифты рубля
-$font-rub: "ALSRubl";
+$font-rub: 'ALSRubl';
 
 //rem
 $base-font-size: 16;
