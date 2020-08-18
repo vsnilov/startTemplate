@@ -6,9 +6,24 @@
   ],
   "plugins": [
     "stylelint-order",
-    "stylelint-scss"
+    "stylelint-scss",
+    "stylelint-selector-bem-pattern"
   ],
   "rules": {
-    "max-nesting-depth": 5
+    "max-nesting-depth": 3,
+    "order/order": [
+      {
+        "type": "rule",
+        "selector": "^$_"
+      }
+    ],
+    "plugin/selector-bem-pattern": {
+      componentName: "[A-Z]+",
+      componentSelectors: {
+        initial: "^\\.{componentName}(?:-[a-z]+)?$",
+        combined: "^\\.combined-{componentName}-[a-z]+$",
+      },
+      utilitySelectors: "^\\.util-[a-z]+$",
+    },
   }
 }

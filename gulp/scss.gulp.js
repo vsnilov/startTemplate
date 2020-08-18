@@ -20,6 +20,7 @@ gulp.task('scss', () =>
   .src([
     `${global.pathsSRC.scss}variables.scss`,
     `${global.pathsSRC.scss}mixins.scss`,
+    `${global.pathsSRC.scss}libs.scss`,
     `${global.pathsSRC.scss}fonts.scss`,
     `${global.pathsSRC.scss}**/*.scss`
   ])

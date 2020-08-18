@@ -76,6 +76,7 @@
     "stylelint-order": "^4.1.0",
     "stylelint-prettier": "^1.1.2",
     "stylelint-scss": "^3.18.0",
+    "stylelint-selector-bem-pattern": "^2.1.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "vue-loader": "^15.4.2",
     "vue-template-compiler": "^2.5.17",
