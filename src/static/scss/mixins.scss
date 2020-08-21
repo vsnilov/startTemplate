@@ -59,6 +59,35 @@
   content: '';
 }
 
+@mixin hoverOpacity($opacity: 0.8) {
+  opacity: $opacity;
+  &:hover {
+    color: inherit;
+    opacity: 1;
+  }
+}
+
+@mixin beforeBg($color: rgba($color-black, 0.2)) {
+  position: relative;
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color;
+    content: '';
+  }
+}
+
+@mixin fullAbsolute() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 @mixin xl() {
   @media screen and (max-width: 1699px) {
     @content;
@@ -87,14 +116,6 @@
   @media screen and (max-width: 349px) {
     @content;
   }
-}
-
-@mixin fullAbsolute() {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 @function pixel-to-vw($pixelSize, $screenWidth: 1920) {

@@ -9,9 +9,11 @@
     "plugin:vue/vue3-recommended"
   ],
   "rules": {
+    "no-unused-expressions": "off",
     "no-comma": "off",
     "no-console": "error",
     "no-alert": "error",
+    "no-param-reassign": [2, { "props": false }],
     "func-names": [
       "error",
       "never",

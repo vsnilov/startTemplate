@@ -1,5 +1,5 @@
 {
-  "navPages": {
+  "menu": {
     "Главная страница" : "main.html",
     "О компании" : "about.html",
     "Каталог" : "catalog.html"

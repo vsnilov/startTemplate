@@ -1,0 +1,22 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+  @include sm() {
+    margin: -10px;
+  }
+  &__item {
+    width: calc(100% / 3);
+    padding: 15px;
+    @include lg() {
+      width: calc(100% / 2);
+    }
+    @include sm() {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+}
+.row-nav {
+  margin-top: 30px;
+}

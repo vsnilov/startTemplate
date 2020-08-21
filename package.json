@@ -1,6 +1,6 @@
 {
   "name": "start-template",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Start template for front-end",
   "main": "gulpfile.js",
   "repository": "https://github.com/vn38/startTemplate",
@@ -9,7 +9,7 @@
   "browserslist": "last 5 versions",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp build",
+    "build": "cross-env NODE_ENV=production gulp build",
     "lint": "eslint src/**/*.{js,vue} --fix && stylelint src/**/*.scss --fix"
   },
   "husky": {

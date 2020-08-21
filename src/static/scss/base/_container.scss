@@ -1,0 +1,10 @@
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  @include lg() {
+    margin: 0 15px;
+  }
+  @include sm() {
+    margin: 0 10px;
+  }
+}
