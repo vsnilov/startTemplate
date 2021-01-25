@@ -1,5 +1,5 @@
-extends ../layout/main
-include ../modules/card
+extends ../layouts/main
+include ../components/card
 
 block variables
   -const title = 'Главная страница'
@@ -28,3 +28,4 @@ block content
         for card in cards
           .row__item
             +card(card)
+  include ../particals/block

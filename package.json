@@ -1,6 +1,6 @@
 {
   "name": "start-template",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "Start template for front-end",
   "main": "gulpfile.js",
   "repository": "https://github.com/vn38/startTemplate",
@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "gulp",
     "build": "cross-env NODE_ENV=production gulp build",
+    "tinypng": "gulp tinypng",
     "lint": "eslint src/**/*.{js,vue} --fix && stylelint src/**/*.scss --fix"
   },
   "lint-staged": {
@@ -68,6 +69,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^2.2.0",
+    "gulp-tinypng": "^1.0.2",
     "gulp-w3c-html-validator": "^2.0.1",
     "hard-source-webpack-plugin": "^0.13.1",
     "husky": "^4.2.3",

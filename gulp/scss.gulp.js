@@ -18,10 +18,10 @@ const processors = [flexbugs, animation, autoprefixer];
 gulp.task('scss', () =>
   gulp
   .src([
-    `${global.pathsSRC.scss}variables.scss`,
     `${global.pathsSRC.scss}mixins.scss`,
-    `${global.pathsSRC.scss}libs.scss`,
+    `${global.pathsSRC.scss}variables.scss`,
     `${global.pathsSRC.scss}fonts.scss`,
+    `${global.pathsSRC.scss}libs.scss`,
     `${global.pathsSRC.scss}**/*.scss`
   ])
   .pipe(gulpIf(isDebug, sourcemaps.init()))

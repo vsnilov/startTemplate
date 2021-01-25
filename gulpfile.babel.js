@@ -20,3 +20,8 @@ gulp.task(
   'build',
   gulp.series('clean', gulp.parallel('scss', 'js', 'image', 'svg', 'pug', 'font'))
 );
+
+gulp.task(
+  'tinypng',
+  gulp.series('tinypng')
+);
