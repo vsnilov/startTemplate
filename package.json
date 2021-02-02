@@ -1,6 +1,6 @@
 {
   "name": "start-template",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "Start template for front-end",
   "main": "gulpfile.js",
   "repository": "https://github.com/vn38/startTemplate",
@@ -39,7 +39,6 @@
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
     "del": "^5.0.0",
-    "dotdotdot-js": "^4.0.9",
     "dotenv": "^8.2.0",
     "eslint": "^6.1.0",
     "eslint-config-airbnb": "^18.0.0",
