@@ -12,13 +12,13 @@ gulp.task(
   'default',
   gulp.series(
     'clean',
-    gulp.parallel('server', 'scss', 'js', 'image', 'svg', 'pug', 'font', 'watch')
+    gulp.parallel('server', 'scss', 'js', 'image', 'svg', 'pug', 'font', 'files', 'watch')
   )
 );
 
 gulp.task(
   'build',
-  gulp.series('clean', gulp.parallel('scss', 'js', 'image', 'svg', 'pug', 'font'))
+  gulp.series('clean', gulp.parallel('scss', 'js', 'image', 'svg', 'pug', 'font', 'files'))
 );
 
 gulp.task(

@@ -6,6 +6,7 @@
       "scss": "./src/static/scss/",
       "js": "./src/static/js/",
       "font": "./src/static/font/**/*",
+      "file": "./src/static/files/**/*",
       "img": "./src/static/img/",
       "svg": "./src/static/img/svg/"
     },
@@ -15,6 +16,7 @@
       "css": "./dist/static/css/",
       "js": "./dist/static/js/",
       "font": "./dist/static/font/",
+      "file": "./dist/static/",
       "img": "./dist/static/img/",
       "svg": "./dist/static/img/svg/"
     }
