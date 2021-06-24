@@ -27,11 +27,6 @@
     "*.js": "eslint --cache --fix",
     "*.css": "stylelint --fix"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.6.0",
