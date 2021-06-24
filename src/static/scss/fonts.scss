@@ -2,4 +2,6 @@
 
 @include font-face('ALSRubl', '../font/Rouble/ALSRubl/ALSRubl');
 
-@include font-face('Roboto', '../font/Roboto/RobotoRegular/RobotoRegular');
+@include font-face('Roboto', '../font/Roboto/RobotoRegular/RobotoLight', 300);
+@include font-face('Roboto', '../font/Roboto/RobotoRegular/RobotoRegular', 400);
+@include font-face('Roboto', '../font/Roboto/RobotoRegular/RobotoBold', 700);

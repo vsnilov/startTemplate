@@ -1,3 +1,4 @@
+
 {
   "env": {
     "es6": true,
@@ -9,9 +10,10 @@
     "plugin:vue/vue3-recommended"
   ],
   "rules": {
+    "no-new": "off",
     "no-unused-expressions": "off",
     "no-comma": "off",
-    "no-console": "error",
+    "no-console": "off",
     "no-alert": "error",
     "no-param-reassign": [2, { "props": false }],
     "func-names": [

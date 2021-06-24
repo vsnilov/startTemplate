@@ -1,10 +1,10 @@
 .container {
-  max-width: 1170px;
+  max-width: var(--width-container);
   margin: 0 auto;
   @include lg() {
-    margin: 0 15px;
+    margin: 0 var(--container-margin);
   }
   @include sm() {
-    margin: 0 10px;
+    margin: 0 var(--container-margin);
   }
 }

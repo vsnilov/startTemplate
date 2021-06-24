@@ -22,6 +22,11 @@ gulp.task(
 );
 
 gulp.task(
+  'pugTask',
+  gulp.series('clean', gulp.parallel('pug'))
+);
+
+gulp.task(
   'tinypng',
   gulp.series('tinypng')
 );

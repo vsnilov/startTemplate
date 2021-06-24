@@ -1,22 +1,22 @@
-.g-menu {
-  &__list {
+.g-menu {}
+  .g-menu__list {
   }
 
-  &__item {
+  .g-menu__item {
   }
 
-  &__link {
+  .g-menu__link {
   }
-}
+
 
 .g-menu-submenu {
-  display: none;
-  &__item {
+  display: none;}
+  .g-menu__item {
   }
 
-  &__link {
+  .g-menu__link {
   }
-}
+
 
 .g-menu-mobile {
   display: none;

@@ -4,8 +4,8 @@
   width: 100%;
   padding: $p;
   overflow: visible;
-  border-radius: 3px;
-  &__close {
+  border-radius: 3px;}
+  .g-modal__close {
     position: absolute;
     top: 6px;
     right: 6px;
@@ -16,4 +16,4 @@
       opacity: 1;
     }
   }
-}
+

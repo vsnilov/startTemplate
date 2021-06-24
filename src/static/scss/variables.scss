@@ -15,6 +15,18 @@ $color-black: #151533;
   --color-back: #{$color-black};
   --color-black-rgb: #{derive-rgb-values-from-hex($color-black)};
   --font-size: 16px;
+  --line-height: 1.6;
+  --width-container: 1170px;
+  --container-margin: 15px;
+  --gap: 30px;
+  --section-offset: 100px;
+  @include lg() {
+    --width-container: 100vw;
+  }
+  @include sm() {
+    --font-size: 14px;
+    --container-margin: 10px;
+  }
 }
 
 $transition-base: all 0.3s ease;
