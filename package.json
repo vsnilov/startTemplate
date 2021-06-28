@@ -23,9 +23,7 @@
     "src/**/*.{scss,vue}": [
       "prettier --write",
       "stylelint --fix"
-    ],
-    "*.js": "eslint --cache --fix",
-    "*.css": "stylelint --fix"
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
