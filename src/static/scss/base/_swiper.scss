@@ -1,0 +1,131 @@
+.swiper-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container-width);
+  margin-top: 60px;
+  @include lg() {
+    margin-top: 30px;
+  }
+  @include sm() {
+    margin-top: 20px;
+  }
+}
+
+.swiper-navigation {
+  display: flex;
+  @include sm() {
+    display: none;
+  }
+  .swiper-button-prev {
+    width: 20px;
+    height: 10px;
+  }
+
+  .swiper-button-next {
+    width: 20px;
+    height: 10px;
+  }
+  .swiper-button-prev + .swiper-button-next {
+    margin-left: 20px;
+  }
+  .e-icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: $transition-base;
+    fill: $color-primary;
+    &:hover {
+      fill: $color-primary;
+    }
+  }
+}
+
+.swiper-pagination {
+  display: flex;
+
+  .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    margin-right: 20px;
+    background-color: $color-link;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+    @include sm() {
+      margin: 0 10px;
+    }
+    &:hover {
+      background-color: $color-primary;
+    }
+
+    &.swiper-pagination-bullet-active {
+      background-color: $color-primary;
+    }
+  }
+}
+
+.swiper-button-round {
+  position: absolute;
+  top: 50%;
+  z-index: 11;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33px;
+  height: 33px;
+  margin-top: -20px;
+  background: $color-primary;
+  border-radius: 50%;
+  box-shadow: 0px 3px 10px rgba(34, 31, 43, 0.08);
+  cursor: pointer;
+  opacity: 1;
+  transition: $transition-base;
+  @include sm() {
+    width: 20px;
+    height: 20px;
+  }
+  &:hover {
+    opacity: 0.75;
+  }
+  &.swiper-button-prev {
+    left: 3px;
+    transform: rotate(180deg);
+  }
+  &.swiper-button-next {
+    right: 3px;
+  }
+  &.swiper-button-disabled {
+    opacity: 0;
+  }
+}
+
+.swiper-progressbar {
+  position: relative;
+  left: -1px;
+  width: 1px;
+  height: 50px;
+  margin: 13px 0;
+  background: #dbdae0;
+  border-radius: 20px;
+  @include lg() {
+    display: none;
+  }
+}
+
+.swiper-progressbar__line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: #221f2b;
+  border-radius: 20px;
+}
+.swiper-counter {
+  font-size: 16px;
+  @include lg() {
+    display: none;
+  }
+}

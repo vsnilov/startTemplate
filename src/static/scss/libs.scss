@@ -1,4 +1,6 @@
 @import 'normalize.css/normalize';
+@import 'swiper/swiper';
+@import 'swiper/components/effect-fade/effect-fade';
 
 .lazyload,
 .lazyloading {
@@ -8,3 +10,25 @@
   opacity: 1;
   transition: opacity 300ms;
 }
+
+$hamburger-padding-x: 0px;
+$hamburger-padding-y: 0px;
+$hamburger-layer-width: 25px;
+$hamburger-layer-height: 2px;
+$hamburger-layer-spacing: 8px;
+$hamburger-layer-border-radius: 0px;
+$hamburger-types: (spin);
+
+@import 'hamburgers/_sass/hamburgers/hamburgers';
+
+.hamburger {
+  position: relative;
+  top: 3px;
+  //display: none;
+
+  @include lg() {
+    display: block;
+  }
+}
+
+@import '@fancyapps/ui/src/Fancybox/Fancybox';

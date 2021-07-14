@@ -1,5 +1,5 @@
 mixin card(card)
   a.c-card(href="javascript::void(0)")
     .c-card__pic
-      img(data-src=card.pic, src=card.pic, alt="")
+      img.lazyload(data-src=card.pic, src="#", alt=card.name)
     .c-card__title.font-700= card.name

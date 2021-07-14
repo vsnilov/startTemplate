@@ -1,23 +1,33 @@
-.g-menu {}
-  .g-menu__list {
-  }
+.g-menu {
+}
+.g-menu__list {
+}
 
-  .g-menu__item {
-  }
+.g-menu__item {
+}
 
-  .g-menu__link {
-  }
-
+.g-menu__link {
+}
 
 .g-menu-submenu {
-  display: none;}
-  .g-menu__item {
-  }
+  display: none;
+}
+.g-menu__item {
+}
 
-  .g-menu__link {
-  }
-
+.g-menu__link {
+}
 
 .g-menu-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
   display: none;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  &.is-active {
+    display: block;
+  }
 }

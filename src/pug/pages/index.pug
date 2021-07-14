@@ -6,6 +6,26 @@ block variables
   -const description = 'Начало пути'
 
 block content
+  .section
+    .container
+      .h1 Иконки без цветные
+      .row
+        .row__item
+          +svg('js')
+          pre +svg('js')
+        .row__item
+          +svg('js', 'e-icon-primary')
+          pre +svg('js', 'e-icon-primary')
+        .row__item
+          +svg('js', 'e-icon-yellow e-icon-yellow--small')
+          pre +svg('js', 'e-icon-yellow e-icon-yellow--small')
+  .section
+    .container
+      .h1 Иконки цветные
+      .row
+        .row__item
+          +icon('js-color')
+          pre +icon('js-color')
   -
     const cards = [
       {
@@ -19,13 +39,50 @@ block content
       {
         "pic": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
         "name": "js",
+      },
+      {
+        "pic": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        "name": "html5",
+      },
+      {
+        "pic": "https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80",
+        "name": "css3",
+      },
+      {
+        "pic": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        "name": "js",
       }
     ]
-
   .section
     .container
-      .row
-        for card in cards
-          .row__item
-            +card(card)
+      .h1 Слайдер + lazyload
+      .swiper-container(data-settings={"spaceBetween": 20, "slidesPerView": 3})
+        .swiper-wrapper
+          for card in cards
+            .swiper-slide
+              +card(card)
+        .swiper-nav
+          .swiper-pagination
+          .swiper-navigation
+            .swiper-button-prev
+              +svg('arrowL')
+            .swiper-button-next
+              +svg('arrowR')
+  .section
+    .container
+      .h1 Табы + fadein
+      ul.row(data-tabs)
+        li.row__item
+          a(data-tabby-default href="#tab-name-1") Таб 1
+        li.row__item
+          a(href="#tab-name-2") Таб 2
+        li.row__item
+          a(href="#tab-name-3") Таб 3
+      #tab-name-1.fadein 1
+      #tab-name-2.fadein 2
+      #tab-name-3.fadein 3
   include ../particals/block
+  .section
+    .container
+      .h1 Модалка
+      button.e-btn(data-fancybox data-src="#callback") Modal
