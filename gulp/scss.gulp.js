@@ -1,7 +1,6 @@
 import gulp from 'gulp';
 import gulpIf from 'gulp-if';
 import concat from 'gulp-concat';
-import sass from 'gulp-sass';
 import base64 from 'gulp-css-base64';
 import postcss from 'gulp-postcss';
 import csso from 'gulp-csso';
@@ -11,6 +10,8 @@ import autoprefixer from 'autoprefixer';
 import browserSync from 'browser-sync';
 import flexbugs from 'postcss-flexbugs-fixes';
 import animation from 'postcss-animation';
+
+const sass = require('gulp-sass')(require('sass'));
 
 const isDebug = process.env.NODE_ENV !== 'production';
 const processors = [flexbugs, animation, autoprefixer];
