@@ -22,12 +22,12 @@
       }
     ],
     "plugin/selector-bem-pattern": {
-      componentName: "[A-Z]+",
-      componentSelectors: {
-        initial: "^\\.{componentName}(?:-[a-z]+)?$",
-        combined: "^\\.combined-{componentName}-[a-z]+$",
+      "componentName": "[A-Z]+",
+      "componentSelectors": {
+        "initial": "^\\.{componentName}(?:-[a-z]+)?$",
+        "combined": "^\\.combined-{componentName}-[a-z]+$"
       },
-      utilitySelectors: "^\\.util-[a-z]+$",
-    },
+      "utilitySelectors": "^\\.util-[a-z]+$"
+    }
   }
 }
