@@ -10,6 +10,8 @@
     "stylelint-selector-bem-pattern"
   ],
   "rules": {
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
     "max-nesting-depth": 3,
     "order/order": [
       {

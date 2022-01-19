@@ -1,16 +1,15 @@
 // import "./vue/index"
 import 'lazysizes';
-import '@fancyapps/ui';
 import svg4everybody from 'svg4everybody';
 import OverlayElement from './class/OverlayElement';
-import Slider from './components/slider';
-import MaskPhone from './components/phone';
+import slider from './components/slider';
+import './components/phoneMask';
 import './components/tabs';
+import './components/fancybox';
 
 document.addEventListener('DOMContentLoaded', () => {
   svg4everybody();
-  Slider();
-  MaskPhone();
+  slider();
   new OverlayElement('menu');
 });
 
