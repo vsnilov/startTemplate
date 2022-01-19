@@ -10,6 +10,8 @@
     "stylelint-selector-bem-pattern"
   ],
   "rules": {
+    "selector-class-pattern": "^[a-z][a-z0-9-]+$",
+    "selector-id-pattern": "^[a-z][a-z0-9-]+$",
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": true,
     "max-nesting-depth": 3,
