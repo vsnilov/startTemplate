@@ -22,8 +22,8 @@ gulp.task('pug', () => {
         pretty: true,
       })
     )
-    .pipe(htmlValidator())
-    .pipe(bemValidator())
+    //.pipe(htmlValidator())
+    //.pipe(bemValidator())
     .on(
       'error',
       notify.onError({

@@ -2,14 +2,14 @@
 @import '@fancyapps/ui/src/Fancybox/Fancybox';
 @import 'swiper/swiper';
 
-$hamburger-padding-x: 0;
-$hamburger-padding-y: 0;
-$hamburger-layer-width: 25px;
-$hamburger-layer-height: 2px;
-$hamburger-layer-spacing: 8px;
-$hamburger-layer-border-radius: 0;
-$hamburger-types: (spin);
-@import 'hamburgers/_sass/hamburgers/hamburgers';
+// $hamburger-padding-x: 0;
+// $hamburger-padding-y: 0;
+// $hamburger-layer-width: 25px;
+// $hamburger-layer-height: 2px;
+// $hamburger-layer-spacing: 8px;
+// $hamburger-layer-border-radius: 0;
+// $hamburger-types: (spin);
+// @import 'hamburgers/_sass/hamburgers/hamburgers';
 
 .lazyload,
 .lazyloading {
@@ -24,7 +24,7 @@ $hamburger-types: (spin);
   position: relative;
   top: 3px;
 
-  @include lg() {
+  @include lg {
     display: block;
   }
 }
